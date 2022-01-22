@@ -1,0 +1,762 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country team name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Serif&family=Pacifico&family=Rubik+Beastly&display=swap" rel="stylesheet">
+    <style>
+        .bottom_nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(3, 169, 244);
+            display: flex;
+        }
+        
+        .end_nav {
+            width: 100%;
+            height: 50px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            display: flex;
+        }
+        
+        .logo {
+            width: 200px;
+            height: 60px;
+            /* border:2px solid red; */
+            margin-left: 50px;
+        }
+        
+        .right {
+            display: flex;
+            /* border:2px solid red; */
+        }
+        
+        .logo>img >a{
+            width: 200px;
+            height: 50%;
+            margin: 2%;
+            margin-top: 3%
+        }
+        
+        .nav-box {
+            margin-left: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+            font-weight: 700px;
+           /* font-family: 'Bree Serif', serif;*/
+        }
+        
+        .nav-boxx {
+            margin-left: 30px;
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            font-family: monospace;
+        }
+        
+        .nav-box>a {
+            text-decoration: none;
+            color: white;
+            /*font-family: 'Bree Serif', serif;*/
+        }
+        
+        .bottom_nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(3, 169, 244);
+            display: flex;
+        }
+        
+        .logo {
+            width: 200px;
+            height: 60px;
+            /* border:2px solid red; */
+            margin-left: 100px;
+        }
+        
+        .right {
+            display: flex;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+        
+        .logo>img {
+            width: 90%;
+            height: 50%;
+            margin: 2%;
+            margin-top: 3%;
+        }
+        
+        .nav-box {
+            margin-left: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+            font-weight: 700px;
+            /*font-family: 'Bree Serif', serif;*/
+            position: relative;
+        }
+        
+        .nav-box>a {
+            text-decoration: none;
+            color: white;
+            /*font-family: 'Bree Serif', serif;*/
+        }
+        
+        .dropdown {
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 30rem;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            transform: translateY(10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        
+        .dropdown-link>a {
+            display: flex;
+            background-color: white;
+            color: grey;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+        }
+        
+        .dropdown-link:hover>a {
+            /* background-color: blanchedalmond; */
+            color: black;
+            font-size: 18px;
+        }
+        
+        .dropdown ul {
+            position: relative;
+        }
+        
+        .arrow {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            top: -5.5px;
+            left: 32px;
+            background-color: white;
+            transform: rotate(45deg);
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: -1;
+        }
+        
+        .nav-box:hover>.dropdown,
+        .dropdown-link:hover>.dropdown {
+            transform: translate(0, 0);
+            opacity: 1;
+            pointer-events: auto;
+            /* position:relative; */
+        }
+        
+        #container {
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+            justify-content: center;
+            margin: 70;
+            padding: 20px;
+            border-radius: 10px;
+            /* grid-template-areas: "a a a a a a a a a a a a" "b b b b c c c c d d d d"; */
+        }
+        
+        #container>div {
+            color: black;
+            border: 0.01mm solid rgb(218, 215, 215);
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #container>div>h2 {
+            text-align: right;
+        }
+        
+        #container>div>div {
+            color: black;
+            border: 0.01mm solid rgb(218, 215, 215);
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            display: grid;
+            gap: 0%;
+            width: 100%;
+        }
+        
+        .z1 {
+            display: block;
+        }
+        
+        .boxx {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: repeat(5, 20%);
+            grid-auto-columns: inherit;
+        }
+        
+        .navvv {
+            text-align-last: inherit;
+            text-align: end;
+            margin-left: 10px;
+        }
+        
+        .box {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: repeat(4, 25%);
+            grid-auto-columns: inherit;
+        }
+        
+        .boxxx {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: repeat(3, 33.33%);
+            grid-auto-columns: inherit;
+        }
+        
+        #container>div>div:hover {
+            background-color: rgb(240, 236, 236);
+            cursor: pointer;
+        }
+        
+        #container>div>div>h2 {
+            font-family: inherit;
+            width: 40%;
+            text-align: center;
+        }
+        
+        .nav-boxx>a {
+            color: black;
+            text-decoration: none;
+            font-family: inherit;
+        }
+        .navimg{
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+
+
+
+<body style="background-color: whitesmoke;">
+   <div>
+      <div class="bottom_nav">
+       <div class="logo">
+            <a href="homepage.html" target="_blank">  <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="cricinfo" style="width:200px;margin-top: 10px;"></a>
+          
+        </div>
+        <div class="right">
+            <div class="nav-box ">
+                <a target="_blank" href="#">Live Scores</a>
+              
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="liveScoreHome.html">Live score Home</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="weekScore.html">Week view</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="players.html">Season View</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="scorebord.html">Desktop Scoreboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown1">
+                        <ul>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Watch IPL</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="weekScore.html">Month View</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="weekScore.html">International Calendar</a>
+                            </li>
+                           
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-box ">
+                <a target="_blank" href="#">Series</a>
+                
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="u19Worldcop.html">U19 World Cup</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="theAshes.html">ICC CWC Super League</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="bBL2021.html">BBL 2021</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="superSmash.html">Super Smash</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown1">
+                        <ul>
+                            <li class="dropdown-link">
+                                <a href="womenAses.html">Women's Ashes</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="u19Worldcop.html">Marsh Cup</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="psl2022.html">PSL 2022</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="wldTestChmpian.html">World Test Championship</a>
+                            </li>
+                           
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="testing(1).html">Teams</a>
+                  
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">Australia</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">Bangladesh</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">England</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">India</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">New Zealand</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">Pakistana</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">South Africa </a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Sri Lanka </a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">West Indies</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Zimbabwe </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown1">
+                        <ul>
+                            <li class="dropdown-link">
+                                <a href="players.html">Afghanistan</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">Ireland</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">Namibia</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">Nepal</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="westindisvsirland.html">Netherlands</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="womenAses.html">Oman</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="AfganistanVnetherland.html">PNG</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="wesrVSingland.html">Scotland</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="cricketmonthly.html">UAE</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="wesrVSingland.html">USA</a>
+                            </li>
+                           
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">News</a>
+                  
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="Newshome.html">News Home</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="covid19.html ">Covid-19</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="balltampering.html">Ball-tampering</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="Technology.html">Technology in cricket</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="Racism.html">Racism</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Features</a>
+                  
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="featureshome.html">Features Home</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="writers.html">Winters</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="photoGalleries.html">Photo galleries</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="cricketmonthly.html">The Cricket Monthly</a>
+                            </li>
+                        </ul>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Videos</a>
+                  
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="videos.html">Videos Home</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">T20 Time Out</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Fantasy Pick</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Polite Enquiries</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Newsroom</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videoshindi.html">Hindi Videos</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videoshindi.html">Match Analysis</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videoshindi.html">Features</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="https://www.youtube.com/espncricinfo">You Tube</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown1">
+                        <ul>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Highlights</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Press Conference</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Matchday</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Run Order</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">25 Questions</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">News and Analysis</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Interviews</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Press Conference</a>
+                            </li>
+                           
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Stats</a>
+                  
+                <div class="dropdown">
+                    <div class="arrow"></div>
+                    <div class="dropdown1">
+                        <ul>
+
+                            <li class="dropdown-link">
+                                <a href="players.html">Stats home</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="players.html">IPL 2021</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="players.html">Super Stats</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="scorebord.html">All Records</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="videos.html">Grounds</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown1">
+                        <ul>
+                            <li class="dropdown-link">
+                                <a href="players.html">AskCricinfo</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="players.html">Statsguru</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="liveScoreHome.html">2021 records</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="players.html">Players</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="players.html">Rankings</a>
+                            </li>
+                           
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="container">
+        <div class="z1">
+            <h3>Popular International Team</h3>
+        </div>
+
+        <div class="boxx">
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/321000/321005.png" alt="">
+                <div>
+                    <h2>Afghanistan</h2>
+                </div>
+            </div>
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313124.logo.png" alt="">
+                <h2>Australia </h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313145.logo.png" alt="">
+                <h2>Bangladesh</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313114.logo.png" alt="">
+                <h2>England</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313128.logo.png" alt="">
+                <h2>India</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313149.logo.png" alt="">
+                <h2>Ireland</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313127.logo.png" alt="">
+                <h2>New Zealand</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313129.logo.png" alt="">
+                <h2>Pakistan</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313150.logo.png" alt="">
+                <h2>Skotland</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313125.logo.png" alt="">
+                <h2>South africa</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313130.logo.png " alt=" ">
+                <h2>Sri Lanka</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313147.logo.png " alt=" ">
+                <h2>United Arab Emirates</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/317600/317615.png " alt=" ">
+                <h2>West Indies</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313131.logo.png " alt=" ">
+                <h2>Zimbabwe</h2>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="z1">
+            <h3>Popular Womens Team</h3>
+        </div>
+
+        <div class="box">
+
+
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313124.logo.png " alt=" ">
+                <h2>Australia Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313145.logo.png " alt=" ">
+                <h2>Bangladesh Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313114.logo.png " alt=" ">
+                <h2>England Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313128.logo.png " alt=" ">
+                <h2>India Women</h2>
+            </div>
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313127.logo.png " alt=" ">
+                <h2>New Zealand Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313129.logo.png " alt=" ">
+                <h2>Pakistan Women</h2>
+            </div>
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313125.logo.png " alt=" ">
+                <h2>South africa Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313130.logo.png " alt=" ">
+                <h2>Sri Lanka Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313100/313147.logo.png " alt=" ">
+                <h2>Thailand Women</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/317600/317615.png " alt=" ">
+                <h2>West Indies Women</h2>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="z1">
+            <h3>IPL Teams</h3>
+        </div>
+
+        <div class="boxxx">
+
+
+
+
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313400/313421.logo.png " alt=" ">
+
+                <h2>Chennai Super Kings</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313400/313422.logo.png " alt=" ">
+                <h2>Delhi Capital</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313400/313419.logo.png " alt=" ">
+                <h2>Kolkata Night Riders</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/317900/317995.png " alt=" ">
+                <h2>Mumbai Indians</h2>
+            </div>
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/317000/317003.png " alt=" ">
+                <h2>Punjab Kings</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313400/313423.logo.png " alt=" ">
+                <h2>Rajasthan Royals</h2>
+            </div>
+
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313400/313418.logo.png " alt=" ">
+                <h2>Royal challengers Bangalore</h2>
+            </div>
+            <div class="a1"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/313400/313480.logo.png " alt=" ">
+                <h2>Sunrisers Hyderabad</h2>
+            </div>
+        </div>
+    </div>
+    <div class="end_nav">
+
+        <div class="right">
+            <div class="nav-boxx">
+                <a target="_blank" href="#">Terms of use</a>
+            </div>
+            <div class="nav-boxx">
+                <a target="_blank" href="#">Privacy Policy</a>
+            </div>
+            <div class="nav-boxx">
+                <a target="_blank" href="#">Addendum to privacy policy</a>
+            </div>
+            <div class="nav-boxx">
+                <a target="_blank" href="#">Interest-Based Ads</a>
+            </div>
+            <div class="nav-boxx">
+                <a target="_blank" href="#">Feedback</a>
+            </div>
+            <div class="navvv">© 2022 ESPN Sports Media Ltd. All rights reserved</div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

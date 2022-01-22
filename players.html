@@ -1,0 +1,1817 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kohli</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Serif&family=Pacifico&family=Rubik+Beastly&display=swap"
+        rel="stylesheet">
+    <style>
+        .bottom_nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(3, 169, 244);
+            display: flex;
+        }
+
+        .logo {
+            width: 200px;
+            height: 60px;
+            /* border:2px solid red; */
+            margin-left: 100px;
+        }
+
+        .right {
+            display: flex;
+            /* border: 2px solid red; */
+            position: relative;
+
+        }
+
+        .logo>img {
+            width: 90%;
+            height: 50%;
+            margin: 2%;
+            margin-top: 3%;
+        }
+
+        .nav-box {
+            margin-left: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+            font-weight: 700px;
+            /*font-family: 'Bree Serif', serif;*/
+            position:relative;
+        }
+
+        .nav-box>a {
+            text-decoration: none;
+            color: white;
+           /* font-family: 'Bree Serif', serif;*/
+        }
+
+        .dropdown {
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 30rem;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            transform:translateY(10px);
+            opacity:0;
+            pointer-events:none;
+            transition:0.5s;
+        }
+        
+
+        .dropdown-link>a {
+            display: flex;
+            background-color: white;
+            color: grey;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+        }
+
+        .dropdown-link:hover>a {
+            /* background-color: blanchedalmond; */
+            color: black;
+            font-size: 18px;
+
+        }
+
+        .dropdown ul {
+            position: relative;
+
+        }
+
+        .arrow {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            top: -5.5px;
+            left: 32px;
+            background-color: white;
+            transform: rotate(45deg);
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+      
+        .nav-box:hover>.dropdown,.dropdown-link:hover>.dropdown{
+transform: translate(0,0);
+opacity:1;
+pointer-events: auto;
+/* position:relative; */
+        }
+th, td, p, input,  {
+            font:15px 'Segoe UI';
+        }
+        table, th, td {
+            border: solid 1px #ddd;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+
+#container{
+
+display: grid;
+grid-template-columns: 1fr 2fr;
+
+
+border: 1px solid ;
+min-height: 10000px;
+width: 100%;
+}
+#lefthalf{
+border: 1px solid white;
+min-height: 1000px;
+width: 59%;
+margin-left: 28%;
+display: block;
+border-radius: 2%;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#righthalf{
+
+border: 1px solid white;
+min-height: 10000px;
+width: 89.5%;
+margin-left: -3.7%;
+border-radius: 2%;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.photo{
+    border: 1px solid white;
+min-height: 480px;
+width: 100%;
+margin-top:15px ;
+border-radius: 2%;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+#kohli{
+    height: 100%;
+    width:  100%;
+    border-radius: 2%;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.mostviewed{
+border: 1px solid white;
+min-height: 580px;
+width: 100%;
+margin-top: 12px;
+border-radius: 2%;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.morelinks{
+border: 1px solid white;
+min-height: 380px;
+width: 100%;
+
+}
+.browseother{
+border: 1px solid white;
+min-height: 25%;
+width: 100%;
+margin-top: 6%;
+display: block;
+
+
+}
+.leftcaption{
+border: 1px solid white;
+min-height: 50px;
+width: 100%;
+display: block;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+justify-content: space-around;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.leftcaption2{
+border: 1px solid white;
+min-height: 15%;
+width: 100%;
+display: block;
+display: grid;
+grid-template-columns: 1fr 1fr;
+justify-content: space-around;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+padding-left: 30%;
+}
+#allplayers{
+border: 1px solid white;
+min-height: 87%;
+width: 100%;
+display: block;   
+margin-top: 4px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+
+}
+.viewedplayers{
+border: 1px solid white;
+min-height: 9.4%;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+justify-content: space-around;
+
+
+}
+#pic{
+min-height: 100%;
+border-radius: 50%;
+width: 100%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+
+}
+.playerface{
+border: 1px solid white;
+min-height: 80%;
+width:30%;
+margin-left: 10%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}
+.playername{
+border: 1px solid white;
+min-height: 70%;
+width:100%;
+margin-left: -100px;
+padding-top: 12px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}
+a, u {
+  text-decoration: none;
+}
+#flag{
+    min-height: 60%;
+    width: 100%;
+    margin-top: 12px;
+}
+.linkbox{
+    display: block;
+    min-height: 85%;
+    border: 1px solid white;
+}
+.lenks{
+border: 1px solid white;
+width: 100%;
+min-height: 13%;
+display: grid;
+grid-template-columns: 1fr 3fr
+}
+.ball{
+border: 1px solid white;
+width: 50%;
+height: 100%;
+margin-left: 10%;
+}
+#redball{
+    height: 80%;
+    width: 80%;
+}
+.caps{
+border: 1px solid white;
+width: 100%;
+height: 100%;
+margin-top: 5%;
+margin-left: -10%;
+
+}
+.leftcaption3{
+    border: 1px solid white;
+    min-height: 10%;
+    width: 100%;;
+}
+.otherplayerbox{
+    border: 1px solid white;
+    min-height: 90%;
+    width: 100%;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}
+.train{
+    border: 1px solid white;
+    min-height: 9.44%;
+    width: 100%;
+    display: flex;
+}
+.engine{
+    border: 1px solid white;
+    min-height: 100%;
+    width: 20%;
+}
+.bogey{
+    border: 1px solid white;
+    min-height: 100%;
+    width: 80%;
+    margin-bottom: 2%;
+}
+#foreignplayers{
+    min-height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}
+#rightbox1{
+    width: 100%;
+    border: 1px solid white;
+    min-height: 0.7%;
+    margin-top: 13px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}
+.options{
+    display: grid;
+    justify-content: space-evenly;
+    margin-top: 13%;
+    font-size: 20px;
+    color: grey;
+    font-weight: 700;
+    
+}
+   
+.rightbox2{
+  margin-top: 16px;
+
+  width: 100%;
+  min-height: 300px;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 1%;
+
+}
+.rightbox2info{
+ 
+    width: 100%;
+    min-height: 160px;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(2,50%);
+    margin-left: 2%;
+    margin-top: 2%;
+    
+}
+.personalinfo{
+   
+    width: 100%;
+    min-height: 20%;
+   
+
+}
+.personalinfo>p{
+    color: gray;
+}
+.teamsplayed{
+    border: 1px solid white
+    width: 100%;
+    min-height: 340px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(5,20%);
+}
+.teamnames{
+ 
+  width: 100%;
+  min-height: 100%;   
+  display: flex;
+}
+.teamnames>p,h3{
+    columns: silver;
+    font-size: 20px;
+    padding-left: 4%;
+    font-family: sans-serif;
+    
+}
+
+#teamsize{
+    height: 40%;
+    width: 10%;
+    margin-top: 5%;
+    padding-left: 4%;
+}
+.biography{
+    border: 1px solid white;
+    width: 100%;
+    min-height: 700x;
+    margin-top: 6%;
+    size: 15px;
+    word-wrap: break-word;
+    border-radius: 3%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding-left: 2px 2px 2px 2px;
+}
+
+
+.biography>p{
+    size: 15px;
+}
+
+.careeravg{
+    border: 1px solid white;
+    width: 100%;
+    height: 600px;
+    margin-top: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}
+.careercaption{
+    border: 1px solid white;
+    width: 100%;
+    height: 150px;
+}
+
+
+.careercaption1{
+size: 40px;
+font-display: bold;
+margin-top: 1.5%;
+margin-left: 1%;
+}
+.careercaption2{
+    size: 30px;
+    margin-top: 5% ;
+    margin-left: 1%;
+}
+.records{
+    border: 1px solid white;
+    width: 100%;
+    height: 300px;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(3,33.33%);
+    grid-template-rows: repeat(1,49%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2%;
+}
+.record1{
+border: 1px solid silver;
+width: 100%;
+height: 100%;
+margin-top: 20%;
+display: flex;
+
+
+}
+ #recordimg{
+height: 50%;
+width: 30%;
+margin-left: 4%;
+margin-top: 6%;
+ }
+
+ .recordtext{
+     margin-top: 3%;
+     margin-left: 4%;
+ }
+#explore{
+    border: 1px solid white;
+    width: 100%;
+    height: 150px;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2%;
+
+
+}
+.explore1{
+    border: 1px solid white;
+    width: 58%;
+    height: 100%;
+    
+    
+}
+.explorebar{
+    border: 1px solid white;
+    width: 17%;
+    height: 20%;
+    margin-top: 20%;
+}
+
+  th, td, p, input, h3 {
+            font:20px 'Segoe UI';
+        }
+        table, th, td {
+            border: solid 1px #ddd;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+        th{ 
+        color:rgb(39, 34, 34);
+            }
+.matches{
+    border: 1px solid white;
+    width: 100%;
+    height: 900px;
+    margin-top: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 2%;
+}  
+.matchinfo{
+    border: 1px solid white;
+    margin-top: 2%;
+    margin-left: 1%;
+    height: 4%;
+    width: 90%;
+
+}
+.matchcolumns{
+
+}
+.debutgrids{
+    border: 1px solid white;
+   
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(18,5%);
+    
+}
+
+
+
+* {
+        box-sizing: border-box;
+      }
+      
+      /* Create three unequal columns that floats next to each other */
+      .column {
+        float: left;
+        padding: 1px;
+        height: 65px; /* Should be removed. Only for demonstration */
+      }
+      
+      .left {
+        width: 25%;
+        margin-left: 1.3%;
+        
+      }
+      .right {
+        width: 22.6%;
+        
+      }
+
+      .middle {
+        width: 50%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        margin-left: 1%;
+        
+      }
+
+
+      .recentmatches{
+       border: 1px solid white;
+       width: 100%;
+       height: 550px;
+       margin-top:2.6%;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       border-radius: 2%;
+      }
+    .videosection{
+       border: 1px solid white;
+       width: 100%;
+       height: 500px;
+       margin-top:2.6%;
+    }
+    .videocaption{
+      
+       height: 70px;
+       margin-top: 3%;
+       margin-left: 3%;
+       
+    }
+    .silverline{
+        margin-left: -3%;
+        width: 99.3%;
+    }
+
+    .video2 {
+      width: 100%;
+      height: 300px;
+      
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+     
+      word-wrap: break-word;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 2%;
+
+    }
+
+    .vidbox2 {
+      width: 90%;
+      border-radius: 4%;
+      min-height: 290px;
+      font-size: 13px;
+      font-family: monospace;
+      border: 1px solid white;
+      word-wrap: break-word;
+
+    }
+
+    #vid2 {
+      width: 100%;
+      border-radius: 4%;
+      min-height: 170px;
+    }
+    .newssection{
+        border: 1px solid white;
+       width: 100%;
+       height: 1130px;
+       margin-top:2.6%;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 2%;
+
+    }
+    .newscaption{
+        height: 70px;
+       margin-top: 3%;
+       margin-left: 3%;
+    }
+
+    #trendingvids {
+      width: 100%;
+      border: 1px solid white;
+      height: 50%;
+      display: block;
+      margin-bottom: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border-radius: 3%;
+
+      
+    }
+
+
+.lastvids {
+      height: 50%;
+      width: 100%;
+      border-radius: 6px;
+    }
+    #lastcaption{
+      width: 94%;
+      border: 1px solid white;
+      height: 65px;
+      padding-top: 8%;
+      padding-left: 5%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
+     }
+     #lastvideos{
+       margin-top: 10px;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
+     .trendingvideos{
+      width: 100%;
+      border: 1px solid white;
+      min-height: 120px; 
+      display: flex;   
+     }
+
+     .finalvideo{
+       height: 100%;
+       width: 100%;
+       word-wrap: break-word;
+       border-radius: 10%;
+     }
+     .thumbnail{
+       border: 1px solid white;
+       width: 30%;
+       margin: 1px;
+       padding: 5%;
+     }
+     .videoinfo{
+      border: 1px solid white;
+       width: 70%;
+        
+       margin-top: 7%;
+       overflow:hidden;
+     }
+
+     .right2 {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 2%;
+
+}
+
+.zoom-in img {
+    width: 100%;
+    /* height:90%; */
+    border-radius: 10px;
+    display: block;
+    transition: transform 1s;
+}
+
+.zoom-in {
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid yellow; */
+    overflow: hidden;
+    font-family: 'Bree Serif', serif;
+}
+
+.right2 a {
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+}
+
+.right2:hover img {
+    transform: scale(1.3);
+}
+.picturearea{
+    border: 1px solid white;
+    width: 100%;
+    height: 1000px;
+    margin-top: 7%;
+}
+.piccaption{
+    margin-left: 3%;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="bottom_nav">
+        <div class="logo">
+            <a href="homepage.html" target="_blank">  <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="cricinfo" style="width:200px;margin-top: 10px;"></a>
+          
+        </div>
+        <div class="right">
+            <div class="nav-box">
+                <a target="_blank" href="liveScoreHome.html">LiveScores</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Series</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="testing (1).html">Teams</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="videos.html">News</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="featureshome.html">Features</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="videos.html">Videos</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="featureshome.html">Stats</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="container">
+        <div id="lefthalf">
+            <div class="photo"><img src="https://i.postimg.cc/6TskKw9C/kohli.png" alt="" id="kohli"></div>
+   
+       
+            <div class="mostviewed">
+                <div class="leftcaption">
+                    <div class="playerface"><img src="https://i.postimg.cc/xdNSDPjK/indian-flag.jpg" alt="" id="flag"></div>
+                    <div class="playername"><h3>Most Viewed Players</h3>
+                    </div>  
+
+
+                </div>
+       
+       
+        <div id="allplayers">
+     
+     
+        <div class="viewedplayers">
+        <div class="playerface"><img src="https://i.postimg.cc/T36BKXcH/sachin.png" alt="" id="pic"></div>
+        <div class="playername"><a href="">Sachin Tendulkar</a>
+        </div>        
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/9Fryy4LD/kl.jpg" alt="" id="pic"></div>
+        <div class="playername"><a href="">K. L. Rahul</a>
+        </div>
+            
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/7Z5XPsFQ/Rishabh.jpg" alt="" id="pic"></div>
+            <div class="playername"><a href="">Rishabh Pant</a>
+            </div>
+            
+
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/Xqy7Y0gY/bumrah.jpg" alt="" id="pic"></div>
+            <div class="playername"><a href="">Jasprit Bumrah</a>
+            </div>
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/bNmpfrP9/shardul.png" alt="" id="pic"></div>
+            <div class="playername"><a href="">Shardul Thakur</a>
+            </div>
+
+
+        </div>
+        <div class="viewedplayers">
+
+            <div class="playerface"><img src="https://i.postimg.cc/ZqFwXBtT/Shreyas.jpg" alt="" id="pic"></div>
+            <div class="playername"><a href="">Shreyas Iyer</a>
+            </div>
+
+
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/mr2dfZbC/Shikhar.png" alt="" id="pic"></div>
+            <div class="playername"><a href="">Shikhar Dhawan</a>
+            </div>
+        
+
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/DZf3N3NM/ashwin.png" alt="" id="pic"></div>
+            <div class="playername"><a href="">Ravichandran Ashwin</a>
+            </div>
+       
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/bvB4mSQs/deepak.jpg" alt="" id="pic"></div>
+            <div class="playername"><a href="">Deepak Chahar</a>
+            </div>
+
+
+        </div>
+        <div class="viewedplayers">
+            <div class="playerface"><img src="https://i.postimg.cc/XYD2WSXP/SKY.jpg" alt="" id="pic"></div>
+            <div class="playername"><a href="">Suryakumar Yadav</a>
+            </div>
+
+
+        </div>
+    </div></div>
+   
+    
+   
+   
+    <div class="morelinks"><div class="leftcaption2"><h3>More <br> links</h3></div>
+    <div class="linkbox">
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">Contracted Players</div></div>
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">Test Caps</div></div>
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">ODI Caps</div></div>
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">T20I Caps</div></div>
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">WTEST Caps</div></div>
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">ODI Caps</div></div>
+    <div class="lenks"><div class="ball"><img id="redball" src="https://i.postimg.cc/mgF5sYqR/redball.jpg" alt=""></div><div class="caps">WT20I Caps</div></div>
+</div>
+    
+    </div>
+   
+        <div class="browseother"><div class="leftcaption3"><h2>Browse other players</h2></div>
+    <div class="otherplayerbox">
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/YSSz8LVc/maxjpg.jpg" alt=""></div><div class="bogey"><h3>Glenn Maxwell</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/qvPRRPTN/babar.jpg" alt=""></div><div class="bogey"><h3>Babar Azam</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/y8bYTg55/asalanka2.jpg" alt=""></div><div class="bogey"><h3>Charith Asalanka</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/rmY7yLBb/shakib.jpg" alt=""></div><div class="bogey"><h3>Shakib Al Hassan</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/fL01bPMR/nortje.jpg" alt=""></div><div class="bogey"><h3>Anrich Nortje</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/BQvccK1x/kanewilliamson.jpg" alt=""></div><div class="bogey"><h3>Kane Williamson</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/tTS7XYCj/josbuttler.jpg" alt=""></div><div class="bogey"><h3>Jos Buttler</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/x8VjjMDB/pollard.jpg" alt=""></div><div class="bogey"><h3>Kieron Pollard</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/bNNcx3T3/rashid.jpg" alt=""></div><div class="bogey"><h3>Rashid Khan</h3></div></div>
+        <div class="train"><div class="engine"><img id="foreignplayers" src="https://i.postimg.cc/Vk8796m1/ce.jpg" alt=""></div><div class="bogey"><h3>Craig Ervine</h3></div></div>
+    </div>
+</div>
+
+</div>
+        <div id="righthalf">
+            <div id="rightbox1">
+              
+                <div class="options">Overview</div>
+                <div class="options">STATS   </div>
+                <div class="options">Records </div>
+                <div class="options">Matches </div>
+                <div class="options">Videos  </div>
+                <div class="options">News    </div>
+                <div class="options">Photos  </div>
+            </div>
+        
+
+          <div class="rightbox2">
+              <div class="rightbox2info">
+                  <div class="personalinfo">
+                      <p>FULL NAME</p>
+                      <h2>Virat Kohli</h2>
+                  </div>
+                  <div class="personalinfo">
+                    <p>BORN</p>
+                    <h2>November 05,1988, Delhi</h2>
+                  </div>
+                  <div class="personalinfo">
+                    <p>AGE</p>
+                    <h2>33y 76d</h2>
+                  </div>
+                  <div class="personalinfo">
+                    <p>Batting Style</p>
+                    <h2>Right hand bat</h2>
+                  </div>
+                  <div class="personalinfo">
+                    <p>Bowling Style</p>
+                    <h2>Right arm medium</h2>
+                  </div>
+                  <div class="personalinfo">
+                    <p>Playing Role</p>
+                    <h2>Top order batter</h2>
+                  </div>
+              </div>
+              <div class="teamsplayed">
+                  <div class="teamnames"><p>Teams</p></div>
+                  <div class="teamnames"></div>
+                  <div class="teamnames"></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/Bn2C5qPx/indflag.png" id = "teamsize"alt=""><h3>India</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/PxD67mPR/ddca.png" alt="" id="teamsize"><h3>Delhi</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/wTMNT9k6/rcb.jpg" alt="" id="teamsize"><h3>RCB</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/pL4cB2ZC/otago.gif" alt="" id="teamsize"><h3>Otago Volts</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/VsZqtK4B/kwazulu.png" alt="" id="teamsize"><h3>Kwazulu Natal</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/7LcC6Rqf/nsw.png" alt="" id="teamsize"><h3>New South Wales</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/bvRCfQPC/sussex.png" alt="" id="teamsize"><h3>Sussex</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/rpCrhjTm/nort.jpg" alt="" id="teamsize"><h3>Northamptonshire</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/15tbs77k/sydney.jpg" alt="" id="teamsize"><h3>Sydney Sixers</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/MK7tk7qC/barbados.png" alt="" id="teamsize"><h3>Barbados Tridents</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/sX5GBJ6y/Victoria.jpg" alt="" id="teamsize"><h3>Victoria Bushrangers</h3></div>
+                  <div class="teamnames"><img src="https://i.postimg.cc/Xq7NVKts/tasmania.jpg" alt="" id="teamsize"><h3>Tasmanian Tigers</h3></div>
+                  <!-- <div class="teamnames"><img src="https://i.postimg.cc/44BVpW4N/titans.png" alt="" id="teamsize"><h3>Titans</h3></div> -->
+              </div>
+              <div class="biography">
+                <p style="color:black;font-size:22px;">India has given to the world many a great cricketer but perhaps none as ambitious as Virat Kohli. To meet his ambition, Kohli employed the technical assiduousness of Sachin Tendulkar and fitness that was in the league of top athletes in the world, not just cricketers. As a result, Kohli became the most consistent all-format accumulator of his time, making jaw-dropping chases look easy, and finding, in his own words, the safest possible way to score runs. Plenty of them. </p>
+
+                <p>
+                 This ambition transferred seamlessly to his captaincy: he demanded more than ever of his bowlers especially the quick ones, often sacrificed a batsman for bowling depth, and led India to a long stay at No. 1 in Test rankings and a first-ever series win in Australia. He is well on his way to end up as India's most successful Test captain. </p>
+                
+              <p>Barring one in Bangladesh, Kohli scored Test hundreds in and against every country he played. He absolutely smashed records for number of matches taken to reach eight, nine, ten and eleven thousand ODI runs. He was a genuine threat to Sachin Tendulkar's record of 49 ODI and 51 Test hundreds. </p>
+                
+              <p>An Under-19 world Cup-winning captain, when he burst onto the scene, Kohli was a precocious talent with a cover drive to kill for. He was destined to be India's next big batsman as the Tendulkar era began to retire, but Kohli wanted to be more: a cricketer whom the opposition would be in awe of, a cricketer whose presence would raise the intensity of the contest. He lived every ball, competed each moment, and made sure he had the fitness and strength to do so. He was widely credited for changing the fitness culture in Indian cricket, introducing endurance tests as a criterion for selection. </p>
+                
+               <P> Kohli was quite simply India's most powerful captain. Centre of every marketing campaign for Indian cricket, he also happened to lead at a time when the BCCI was run by interim administrators who knew better than to draw the ire of Indian cricket's biggest star. There was never any cause to doubt his intent: to do things that will win matches for India, which they did plenty under him.</p>
+
+
+              </div>
+
+                <div class="careeravg">
+                  
+                   <div class="careercaption">
+
+                     <div class="careercaption1"><p><b>CAREER AVERAGES</b></p></div>
+                     <div class="careercaption2"><p><b>Batting & Fielding</b></p></div>
+                   </div>
+                  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <table class="table table-striped">
+             
+            <th>Format</th>
+            <th>Mat</th>
+            <th>Inns</th>
+            <th>NO</th>
+            <th>Runs</th>
+            <th>HS</th>
+            <th>Ave</th>
+            <th>BF</th>
+            <th>SR</th>
+            <th>100s</th>
+            <th>50s</th>
+            <th>4s</th>
+            <th>6s</th>
+            <th>Cat</th>
+            <th>St</th>
+       
+    
+        <tbody id="myTable">
+    
+        </tbody>
+    </table>
+   </div>
+ 
+   
+
+<div class="records">
+
+
+<div class="record1"><img src="https://i.postimg.cc/VL1y6P4V/6th.png"   alt="" id="recordimg"><div class="recordtext"><h2>Most matches as captain(68)</h2> <p>Test Matches</p></div></div>
+<div class="record1"><img src="https://i.postimg.cc/hPKwnbtF/7th.png"   alt="" id="recordimg"><div class="recordtext"><b><font size="5.5">Most runs in a match on the losing side(256)</font></b> <p>Test Matches</p></div></div>
+<div class="record1"><img src="https://i.postimg.cc/gkcMQzgm/medal.png" alt="" id="recordimg"><div class="recordtext"><h2>Hundred in each inning of a Match<p>Test Matches</p></div></div>
+
+
+
+</div>
+
+
+<div id="explore">
+
+
+<div class="explore1">
+    <div class="exploreimg"><img src="https://i.postimg.cc/Ssbxgt7Y/explorestats.png" alt=""></div>
+
+</div>
+
+
+
+
+
+<div class="explorebar">
+
+    <div class="custom-select" style="width:200px;">
+       
+        <select>
+          <option value="0">Test</option>
+          <option value="1">Player analaysis menu filter</option>
+          <option value="2">Test match list</option>
+          <option value="3">Batting career summary</option>
+          <option value="4">Batting innings list</option>
+          <option value="5">High scores</option>
+          <option value="6">Batting series averages</option>
+          <option value="7">Bowling career summary</option>
+          <option value="8">Bowling innings list</option>
+          <option value="9">Bowling match list</option>
+          <option value="10">Best innings bowling</option>
+          <option value="11">Best match bowling</option>
+          <option value="12">Bowling series averages</option>
+        </select>
+    </div>
+  
+</div>
+      
+<div class="explorebar">
+
+    <div class="custom-select" style="width:200px;">
+        <select>
+          <option value="0">ODI</option>
+          <option value="1">Player analaysis menu filter</option>
+          <option value="2">ODI match list</option>
+          <option value="3">Batting career summary</option>
+          <option value="4">Batting innings list</option>
+          <option value="5">High scores</option>
+          <option value="6">Batting series averages</option>
+          <option value="7">Bowling career summary</option>
+          <option value="8">Bowling innings list</option>
+          <option value="9">Bowling match list</option>
+          <option value="10">Best innings bowling</option>
+          <option value="11">Best match bowling</option>
+          <option value="12">Bowling series averages</option>
+        </select>
+    </div>
+  
+</div>
+<div class="explorebar">
+
+    <div class="custom-select" style="width:200px;">
+        <select>
+          <option value="0">T20I</option>
+          <option value="1">Player analaysis menu filter</option>
+          <option value="2">T20I match list</option>
+          <option value="3">Batting career summary</option>
+          <option value="4">Batting innings list</option>
+          <option value="5">High scores</option>
+          <option value="6">Batting series averages</option>
+          <option value="7">Bowling career summary</option>
+          <option value="8">Bowling innings list</option>
+          <option value="9">Bowling match list</option>
+          <option value="10">Best innings bowling</option>
+          <option value="11">Best match bowling</option>
+          <option value="12">Bowling series averages</option>
+        </select>
+    </div>
+  
+</div>
+</div>
+
+
+
+
+<div class="matches">
+<div class="matchinfo"><B> <h4>DEBUT/LAST MATCHES-PLAYER</h4></b></div>
+<div class="debutgrids">
+
+
+   
+      
+      
+      
+      <div class="row">
+        <div class="column left" >
+         <h4><b>Test matches</b></h4>
+        </div>
+        <div class="column middle" >
+         
+            
+   
+         
+        </div>
+        <div class="column right" >
+            <div class="custom-select" style="width:200px;">
+       
+                <select>
+                  <option value="0">Test</option>
+                  <option value="1">Player analaysis menu filter</option>
+                  <option value="2">Test match list</option>
+                  <option value="3">Batting career summary</option>
+                  <option value="4">Batting innings list</option>
+                  <option value="5">High scores</option>
+                  <option value="6">Batting series averages</option>
+                  <option value="7">Bowling career summary</option>
+                  <option value="8">Bowling innings list</option>
+                  <option value="9">Bowling match list</option>
+                  <option value="10">Best innings bowling</option>
+                  <option value="11">Best match bowling</option>
+                  <option value="12">Bowling series averages</option>
+                </select>
+            </div>
+      </div>
+      </div>
+
+
+       
+      <div class="row">
+        <div class="column left" >
+         <h5>Debut</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+    West Indies vs India at Kingston - June 20 - 23, 2011
+         
+        </div>
+      
+      
+      
+        <div class="column right" >
+         </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h5>Last</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+            South Africa vs India at Cape Town - January 11 - 14, 2022
+         
+        </div>
+        <div class="column right" >
+            
+         </div>
+      </div>
+
+
+      <div class="row">
+        <div class="column left" >
+         <h4><b>ODI Matches</b></h4>
+        </div>
+        <div class="column middle" >
+         
+            
+   
+         
+        </div>
+        <div class="column right" >
+            <div class="custom-select" style="width:200px;">
+                <select>
+                  <option value="0">ODI</option>
+                  <option value="1">Player analaysis menu filter</option>
+                  <option value="2">ODI match list</option>
+                  <option value="3">Batting career summary</option>
+                  <option value="4">Batting innings list</option>
+                  <option value="5">High scores</option>
+                  <option value="6">Batting series averages</option>
+                  <option value="7">Bowling career summary</option>
+                  <option value="8">Bowling innings list</option>
+                  <option value="9">Bowling match list</option>
+                  <option value="10">Best innings bowling</option>
+                  <option value="11">Best match bowling</option>
+                  <option value="12">Bowling series averages</option>
+                </select>
+            </div>
+      </div>
+      </div>
+
+
+       
+      <div class="row">
+        <div class="column left" >
+         <h5>Debut</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+    West Indies vs India at Kingston - June 20 - 23, 2011
+         
+        </div>
+      
+      
+      
+        <div class="column right" >
+         </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h5>Last</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+            South Africa vs India at Cape Town - January 11 - 14, 2022
+         
+        </div>
+        <div class="column right" >
+            
+         </div>
+      </div>
+
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h4><b>T20I Matches</b></h4>
+        </div>
+        <div class="column middle" >
+         
+            
+   
+         
+        </div>
+        <div class="column right" >
+            <div class="custom-select" style="width:200px;">
+                <select>
+                  <option value="0">T20I</option>
+                  <option value="1">Player analaysis menu filter</option>
+                  <option value="2">T20I match list</option>
+                  <option value="3">Batting career summary</option>
+                  <option value="4">Batting innings list</option>
+                  <option value="5">High scores</option>
+                  <option value="6">Batting series averages</option>
+                  <option value="7">Bowling career summary</option>
+                  <option value="8">Bowling innings list</option>
+                  <option value="9">Bowling match list</option>
+                  <option value="10">Best innings bowling</option>
+                  <option value="11">Best match bowling</option>
+                  <option value="12">Bowling series averages</option>
+                </select>
+            </div>
+      </div>
+      </div>
+
+
+       
+      <div class="row">
+        <div class="column left" >
+         <h5>Debut</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+    West Indies vs India at Kingston - June 20 - 23, 2011
+         
+        </div>
+      
+      
+      
+        <div class="column right" >
+         </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h5>Last</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+            South Africa vs India at Cape Town - January 11 - 14, 2022
+         
+        </div>
+        <div class="column right" >
+            
+         </div>
+      </div>
+
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h4><b>FC Matches</b></h4>
+        </div>
+        <div class="column middle" >
+         
+            
+   
+         
+        </div>
+        <div class="column right" >
+           
+      </div>
+      </div>
+
+
+       
+      <div class="row">
+        <div class="column left" >
+         <h5>Debut</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+    West Indies vs India at Kingston - June 20 - 23, 2011
+         
+        </div>
+      
+      
+      
+        <div class="column right" >
+         </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h5>Last</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+            South Africa vs India at Cape Town - January 11 - 14, 2022
+         
+        </div>
+        <div class="column right" >
+            
+         </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h4><b>List A matches</b></h4>
+        </div>
+        <div class="column middle" >
+         
+            
+   
+         
+        </div>
+        <div class="column right" >
+            
+      </div>
+      </div>
+
+
+       
+      <div class="row">
+        <div class="column left" >
+         <h5>Debut</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+    West Indies vs India at Kingston - June 20 - 23, 2011
+         
+        </div>
+      
+      
+      
+        <div class="column right" >
+         </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h5>Last</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+            South Africa vs India at Cape Town - January 11 - 14, 2022
+         
+        </div>
+        <div class="column right" >
+            
+         </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="row">
+        <div class="column left" >
+         <h4><b>T20 matches</b></h4>
+        </div>
+        <div class="column middle" >
+         
+            
+   
+         
+        </div>
+        <div class="column right" >
+           
+      </div>
+      </div>
+
+
+       
+      <div class="row">
+        <div class="column left" >
+         <h5>Debut</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+    West Indies vs India at Kingston - June 20 - 23, 2011
+         
+        </div>
+      
+      
+      
+        <div class="column right" >
+         </div>
+      </div>
+      <div class="row">
+        <div class="column left" >
+         <h5>Last</h5>
+        </div>
+        <div class="column middle" >
+         
+            
+            South Africa vs India at Cape Town - January 11 - 14, 2022
+         
+        </div>
+        <div class="column right" >
+            
+         </div>
+      </div>
+    </div>
+
+
+
+    <div class="recentmatches">
+   <img src="https://i.postimg.cc/FzqTR5hW/recentmatch.png" alt="" id="recentimg">
+    </div>
+
+
+
+
+    <div class="videosection">
+
+        <div class="videocaption">
+           <b> VIDEOS</b>
+          <div class="silverline"><hr></div> 
+        </div>
+
+
+        <div class="video2">
+            <div class="vidbox2">
+              <iframe id="vid2" src="https://www.youtube.com/embed/9agOr2WqpLM" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <h4 class="caption2">
+                Cummins: 'Challenge for this Australian side would be to be successful
+                overseas'
+              </h4>
+              <p>Jan16, 2022</p>
+            </div>
+            <div class="vidbox2">
+              <iframe id="vid2" src="https://www.youtube.com/embed/ezZ4OKaS0Es" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <h4 class="caption2">Root: I'm the right man to turn England around</h4>
+              <p>Jan16, 2022</p>
+            </div>
+            <div class="vidbox2">
+              <iframe id="vid2" src="https://www.youtube.com/embed/UY09td1nBSw" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <h4 class="caption2">
+                Newsroom: Is Rishabh Pant a dark horse to be India's next Test
+                captain?
+              </h4>
+              <p>Jan16, 2022</p>
+            </div>
+            <div class="vidbox2">
+              <iframe id="vid2" src="https://www.youtube.com/embed/a2ZV-7L97Hg" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <h4 class="caption2">
+                #PoliteEnquiries: Is it time up for Root as captain?
+              </h4>
+              <p>Jan16, 2022</p>
+            </div>
+          </div>
+          <hr>
+    </div>
+
+    <div class="newssection">
+      <div class="newscaption">
+          NEWS AND FEATURES
+          <div class="silverline"><hr></div>
+      </div>
+
+
+      <div id="trendingvids">
+        
+       
+       <div id="lastvideos">
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/4QkHIhB1hdw" title="YouTube video player" frameborder="0" allow="accelerometer; 
+          autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="videoinfo"><p>Match Day</p>
+          <h5>Sanjay Manjrekar: 'Put pressure on the opposition, open with Venkatesh Iyer'</h6>
+        </div></div>
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/50QlXwMG9Is" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="videoinfo"><p>Newsroom</p>
+            <h5>Is Rishabh Pant a dark horse to be India's next Test captain?</h5>
+          </div></div></div>
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/4Jzj6fPOEIs" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="videoinfo"><p>Match Day</p>
+            <h5>Maharaj or Shamsi? Should India trust Venkatesh Iyer?</h5>
+
+          </div></div>
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/j06dRFuuqWw" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="videoinfo">
+            <p>Press Conference</p>
+            <h5>Cummins: 'Hugely pleasing to be getting better' at balancing captaincy and bowling</h5> 
+          </div></div>
+      </div>
+    </div>
+    
+
+
+    <div class="picturearea">
+        <div class="piccaption"> <h2><b> Photos</b></h2></div>
+        <div class="right2">
+            <div class="zoom-in">
+                <a href="#"> <img src="https://i.postimg.cc/wBZy3sFg/kohlishot.jpg" alt=""></a>
+            </div>
+            <a href="#">Cover drive by Virat Kohli</a>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+      
+
+
+
+      
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div> 
+   </div> 
+            </div>
+               </div>
+
+
+        
+    
+            
+    
+     
+    
+    
+    
+    
+   
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   
+   
+   
+   
+   
+   
+
+   var careerstats = [
+        {'Format': 'Test', 'Mat': '99','Inns': '168', 'NO': '10','Runs': '7962', 'HS': '254*','Ave': '50.39', 'BF': '14300', 'SR': '55.67', 'Cent': '27','Fifties': '28', 'Fours': '896', 'Sixes': '24','Ct': '100', 'St': '0'},
+  
+  {'Format': 'ODI', 'Mat': '255','Inns': '246', 'NO': '39','Runs': '12220', 'HS': '183','Ave': '59.03', 'BF': '13124', 'SR': '93.11', 'Cent': '43','Fifties': '63', 'Fours': '1143', 'Sixes': '125','Ct': '132', 'St': '0'},
+  
+  {'Format': 'T20I', 'Mat': '95','Inns': '87', 'NO': '25','Runs': '3227', 'HS': '94*','Ave': '52.04', 'BF': '2340', 'SR': '137.90', 'Cent': '0','Fifties': '29', 'Fours': '290', 'Sixes': '91','Ct': '42', 'St': '0'},
+
+  {'Format': 'Test', 'Mat': '99','Inns': '168', 'NO': '10','Runs': '7962', 'HS': '254*','Ave': '50.39', 'BF': '14300', 'SR': '55.67', 'Cent': '27','Fifties': '28', 'Fours': '896', 'Sixes': '24','Ct': '100', 'St': '0'},
+  
+  {'Format': 'ODI', 'Mat': '255','Inns': '246', 'NO': '39','Runs': '12220', 'HS': '183','Ave': '59.03', 'BF': '13124', 'SR': '93.11', 'Cent': '43','Fifties': '63', 'Fours': '1143', 'Sixes': '125','Ct': '132', 'St': '0'},
+  
+  {'Format': 'T20I', 'Mat': '95','Inns': '87', 'NO': '25','Runs': '3227', 'HS': '94*','Ave': '52.04', 'BF': '2340', 'SR': '137.90', 'Cent': '0','Fifties': '29', 'Fours': '290', 'Sixes': '91','Ct': '42', 'St': '0'}
+  
+        ]
+
+        buildTable(careerstats)
+
+
+
+function buildTable(data){
+    var table = document.getElementById('myTable')
+
+    for (var i = 0; i < data.length; i++){
+        var row = `<tr>
+                        <td>${data[i].Format}</td>
+                        <td>${data[i].Mat}</td>
+                        <td>${data[i].Inns}</td>
+                        <td>${data[i].NO}</td>
+                        <td>${data[i].Runs}</td>
+                        <td>${data[i].HS}</td>
+                        <td>${data[i].Ave}</td>
+                        <td>${data[i].BF}</td>
+                        <td>${data[i].SR}</td>
+                        <td>${data[i].Cent}</td>
+                        <td>${data[i].Fifties}</td>
+                        <td>${data[i].Fours}</td>
+                        <td>${data[i].Sixes}</td>
+                        <td>${data[i].Ct}</td>
+                        <td>${data[i].St}</td>
+                     
+                  </tr>`
+        table.innerHTML += row
+
+
+    }
+}
+
+
+
+
+
+
+
+    
+</script>

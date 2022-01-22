@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        width:90%;
+        
+        /*border:1px solid white;*/
+        display:flex;
+        margin:auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+    #box1{
+        width:98%;
+        /* height:760px; */
+        /*border:1px solid white;*/
+        margin-top: 15px;
+        /* margin-left:15px; */
+        display:flex;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: hidden;
+        
+    }
+    #box1 #image{
+        display:block;
+        transition: transform 1s;
+        overflow:hidden;
+    }
+    #box1:hover #image{
+        
+        transition: transform 1;
+        transform:scale(1.3);
+        
+    }
+    #box1:hover #text p:nth-child(1){
+        color:blue;
+    }
+    #box2{
+        width:90%;
+        
+       /* border:1px solid white;*/
+        margin-left: 15px;
+        margin-top: 15px;
+        display:flex;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #box2 .image2{
+        display:block;
+        transition: transform 1s;
+        overflow:hidden;
+    }
+    #box2:hover .image2{
+        
+        transition: transform 1;
+        transform:scale(1.3);
+        
+    }
+    #box2:hover .text2 p:nth-child(1){
+        color:blue;
+    }
+    #image{
+        width:48%;
+        height:200px;
+        /*border:1px solid white;*/
+        
+ }
+
+    #image:hover{
+        width:48%;
+        height:200px;
+        /*border:1px solid white;*/
+        transform: scale(1.3);
+        
+        
+        
+    }
+    #text{
+        width:85%;
+        height:200px;
+        /*border:1px solid white;*/
+        margin-left: 0px;
+        padding-left:5px;
+        font-size:18px;
+    }
+    .left{
+        /*border:1px solid white;*/
+        width:70%;
+        padding:10px;
+        
+        
+    }
+    .left>p{
+        font-size:20px;
+    }
+    .right{
+        /*border:1px solid white;*/
+        width:30%;
+        padding:12px;
+
+    }
+    .box{
+        width:100%;
+    }
+    .cont2{
+        width:100%
+    }
+    .image2{
+        width:30%;
+     /*   border:1px solid white;*/
+        height:100px;
+        padding:5px 0px 0px 5px;
+    }
+    .text2{
+        width:65%;
+        /*border:1px solid white;*/
+        height:120px;
+        padding-left: 8px;
+    }
+        
+
+
+    
+    .text2>p{
+        font-size:18px;
+    }
+    .box3{
+        width:76%;
+        height:600px;
+        /*border:1px solid white;*/
+        margin-left: 15px;
+        margin-top: 15px;
+        
+    }
+    .box4{
+        width:75%;
+        height:600px;
+       /* border:1px solid white;*/
+        margin-left: 15px;
+        margin-top: 15px;
+        
+    }
+    #add{
+        margin-top: 5px;
+        width:100%;
+        height:70px;
+
+
+    }
+
+    #add>img{
+        width:100%;
+        height:70px;
+
+    }
+    
+
+.bottom_nav{
+    width:100%;
+    height:50px;
+    background-color: rgb(3,169,244);
+    display:flex;
+}
+.logo{
+    width:200px;
+    height:60px;
+    /* border:2px solid red; */
+    margin-left: 100px;
+}
+.right{
+    display:flex;
+    /* border:2px solid red; */
+   
+}
+.logo>img{
+    width:90%;
+    height:50%;
+    margin:2%;
+    margin-top: 3%;}
+    .nav-box{
+        width: 90px;
+        
+     margin-left:30px; 
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700px;
+    /*border: 1px solid red;*/
+    /*margin-bottom: 2%;*/
+    /*font-family: 'Bree Serif', serif; */
+}
+.nav-box>a{
+    text-decoration: none;
+    color :white;
+    margin-bottom: 2%;
+    /*font-family: 'Bree Serif', serif;*/
+}
+    </style>
+</head>
+<body>
+    <div class="bottom_nav">
+        <div class="logo">
+            <a href="homepage.html" target="_blank">  <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="cricinfo" style="width:200px;margin-top: 10px;"></a>
+          
+        </div>
+        <div class="right">
+            <div class="nav-box">
+                <a target="_blank" href="#">LiveScores</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Series</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Teams</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">News</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Features</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Videos</a>
+            </div>
+            <div class="nav-box">
+                <a target="_blank" href="#">Stats</a>
+            </div>
+        </div>
+    </div>    
+   
+    
+
+    <div id="add"><img src="https://tpc.googlesyndication.com/simgad/11330857671321266686?"></div>
+    
+    
+    <div id="container">
+        <div class="left">
+            <h1>Latest News</h1>
+            <p></p>
+            <div class="box">
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/333400/333469.6.jpg"></div>
+                <div id="text"><p><b>Zimbambwe consecutive win series against srilanka </b></p>
+                <p>CAB president Avishek Dalmiya former captain Laxmi Ratan shukla have also tested positive</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/228100/228197.7.jpg"></div>
+                <div id="text"><p><b> players in Bengal squad for Ranji Trophy opener</b></p>
+                <p>August window confirmed for rescheduled Test series against Australia</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/332600/332661.6.jpg"></div>
+                <div id="text"><p><b>Covid-19 situation 'a distraction',says thorpe Cummins agrees it's been really tough for England</b></p>
+                <p>England's stand in coach expects cages tigers Stokes </p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/332500/332593.6.jpg"></div>
+                <div id="text"><p><b>Ravichandran Ashwin to Temba Bavuma, Full and on middle.</b></p>
+                <p>Times of India to get all the live cricket score updates, scorecard, and ball by ball commentary of 1st ODI match between India and South Africa</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/308100/308128.jpg"></div>
+                <div id="text"><p><b>Full and on off. Bavuma pushes it to cover. Not in the gap though.</b></p>
+                <p>Quinton de Kock, Tossed up, full and on leg. De Kock flicks it towards square</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/311600/311671.6.jpg"></div>
+                <div id="text"><p><b>Shardul Thakur to Temba Bavuma, Shortish and on off, Bavuma strokes it to covers for one</b></p>
+                <p> It came down to two runs needed off the final ball, but Cameron Boyce - who picked a five-wicket haul in the first innings </p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/329400/329496.jpg"></div>
+                <div id="text"><p><b>Greame smith:South Africa to host Australia,England tours in 2023</b></p>
+                <p>Khawaja, en route his fifty, took Thunder past 150 but it was a below-par total given the start they had got.</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/286000/286000.6.jpg"></div>
+                <div id="text"><p><b>Sydney Sixers' 27-run win in Brisbane brought a sorry end to another disappointing BBL season for Brisbane Heat</b></p>
+                <p> Heat struggled for momentum and lost wickets at regular intervals.</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/305800/305827.6.jpg"></div>
+                <div id="text"><p><b>Somerset have signed Matt Renshaw as an overseas player for the 2022 season</b></p>
+                <p>Clarke and Maxwell were dismissed in quick succession, Marcus Stoinis cashed in on the advantage.  </p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/274300/274315.6.jpg"></div>
+                <div id="text"><p><b>Sydney Thunder stunned Melbourne Renegades in a thriller at the MCG</b></p>
+                <p>Renegades had skipper Aaron Finch batting on 82</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/327500/327503.jpg"></div>
+                <div id="text"><p><b>Somerset director of cricket, Andy Hurry, expressed his happiness in recruiting</b></p>
+                <p>Back in the frame for selection for the national team."</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/328700/328729.6.jpg"></div>
+                <div id="text"><p><b>2018 season and made quite an impression after replacing compatriot Cameron</b></p>
+                <p>six games during his last stint, Renshaw scored 513 Championship runs</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/329900/329951.6.jpg"></div>
+                <div id="text"><p><b>Renshaw, who played 11 Tests for Australia between 2016 and 2018</b></p>
+                <p>stranger to Somerset. He played for the Taunton-based team</p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+            <div id="box1">
+                <div id="image"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/lsci/db/PICTURES/CMS/329900/329930.6.jpg"></div>
+                <div id="text"><p><b>August in the County Championship as well as the Royal London One-Day</b></p>
+                <p>The Australian top-order batsman will be available to play at least until end </p>
+                <p>14-jan-2022   .ESPNcricinfo staff</p></div>
+                
+            </div>
+        </div>
+            
+            
+        </div>
+        
+        
+            
+        
+        <div class="right"><h3>Most Read</h3>
+            <div class="cont2">
+            <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/318500/318549.5.jpg"></div>
+            <div class="text2"><p>Oppurtunity for India,south Africa to build ODI plans</p>
+            <p>22h ago</p></div>
+        </div>
+        <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/310700/310703.6.jpg"></div>
+            <div class="text2"><p>Lucknow for India,South Africa to build ODI plans</p>
+            <p>2h ago</p></div>
+        </div>
+        <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/333300/333373.6.jpg"></div>
+            <div class="text2"><p>ECB launches inquiry after Root and Anderson seen among intoxicated</p>
+            <p>12h ago</p></div>
+        </div>
+        <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/287500/287526.5.jpg"></div>
+            <div class="text2"><p>HArdik Pandya,Rashid Khan,Shubman Gill set to join Ahmedabad franchise</p>
+            <p>3h ago</p></div>
+        </div>
+        <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/327100/327178.5.jpg"></div>
+            <div class="text2"><p>Mohammad hasnain reported at BBL</p>
+            <p>2h ago</p></div>
+        </div>
+        <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/318500/318549.5.jpg"></div>
+            <div class="text2"><p>Set to undergo to test on his action</p>
+            <p>9h ago</p></div>
+        </div>
+        <div id="box2">
+            <div class="image2"><img src="https://img1.hscicdn.com/image/upload/f_auto,t_h_100/lsci/db/PICTURES/CMS/333300/333373.6.jpg"></div>
+            <div class="text2"><p>A brilliant recap of Englands Ashes tours Down Under</p>
+            <p>8h ago</p></div>
+        </div>
+        <div class="box3">
+            <img src="https://tpc.googlesyndication.com/simgad/13683194396473605559?">
+        </div>
+        
+    </div>
+    </div>
+    
+</body>
+</html>

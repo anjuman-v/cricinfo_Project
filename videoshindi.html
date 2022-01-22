@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .bottom_nav {
+      width: 100%;
+      height: 50px;
+      background-color: rgb(3, 169, 244);
+      display: flex;
+      position: fixed;
+    }
+
+    .logo {
+      width: 200px;
+      height: 60px;
+      /* border:2px solid red; */
+      margin-left: 100px;
+    }
+
+    .right {
+      display: flex;
+      /* border:2px solid red; */
+
+    }
+
+    .logo>img {
+      width: 90%;
+      height: 50%;
+      margin: 2%;
+      margin-top: 3%;
+    }
+
+    .nav-box {
+      margin-left: 30px;
+      font-size: 20px;
+      margin-top: 15px;
+      font-weight: 700px;
+      /*font-family: 'Bree Serif', serif;*/
+    }
+
+    .nav-box>a {
+      text-decoration: none;
+      color: white;
+      /*font-family: 'Bree Serif', serif;*/
+    }
+
+
+    .video1 {
+      display: flex;
+      justify-content: space-around;
+      margin-top: ;
+    }
+
+    #vid1 {
+      width: 80%;
+      height: 500px;
+      border-radius: 2%;
+    }
+
+    .caption1 {
+      margin-left: 10%;
+    }
+
+    .video2 {
+      width: 80%;
+      height: 300px;
+      margin-left: 10%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /*border: 1px solid red;*/
+      word-wrap: break-word;
+      overflow-x: scroll;
+
+    }
+
+    .vidbox2 {
+      width: 90%;
+      border-radius: 4%;
+      min-height: 290px;
+      font-size: 13px;
+      font-family: monospace;
+     /* border: 1px solid yellow;*/
+      word-wrap: break-word;
+
+    }
+
+    #vid2 {
+      width: 100%;
+      border-radius: 4%;
+      min-height: 170px;
+    }
+
+    p {
+      font-size: 0.875em;
+      color: gray;
+    }
+
+    .halfway {
+     /* border: 1px solid black;*/
+      width: 80%;
+      min-height: 1560px;
+
+      margin-left: 10%;
+
+    }
+
+    .showcards {
+     /* border: 1px solid black;*/
+      width: 100%;
+      height: 200px;
+
+      top: 30px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      overflow-x: scroll;
+
+    }
+
+    .card {
+      /*border: 1px solid red;*/
+      width: 90%;
+      padding: 3px;
+
+
+    }
+
+    .cardsize {
+      height: 100%;
+      width: 100%;
+
+    }
+
+    @media only screen and (min-width:320px) and (max-width:720px) {
+      .showcards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+
+
+    }
+
+    @media only screen and (min-width:320px) and (max-width:720px) {
+      .video2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    }
+
+    #finalsection {
+      display: flex;
+      column-gap: 5%;
+      overflow:hidden;
+    }
+
+    #finalvids {
+      width:70%;
+     /* border: 1px solid red;*/
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      grid-template-rows: repeat(5, 20%);
+      grid-auto-columns: inherit;
+    }
+
+    .finale {
+      width: 96%;
+      border-radius: 5%;
+      height: 240px;
+      padding: 2%;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      
+
+    }
+
+    #trendingvids {
+      width: 30%;
+      /*border: 1px solid green;*/
+      height: 50%;
+      display: block;
+      margin-bottom: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border-radius: 3%;
+
+      
+    }
+    
+
+    
+
+
+    @media only screen and (min-width:320px) and (max-width:720px) {
+      #finalvids {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    .last {
+      height: 100%;
+      width: 100%;
+    }
+
+    .lastvids {
+      height: 50%;
+      width: 100%;
+      /*border-radius: 6px;*/
+    }
+    #lastcaption{
+      width: 94%;
+      /*border: 1px solid red;*/
+      height: 65px;
+      padding-top: 8%;
+      padding-left: 5%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
+     }
+     #lastvideos{
+       margin-top: 10px;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
+     .trendingvideos{
+      width: 100%;
+      /*border: 1px solid green;*/
+      min-height: 120px; 
+      display: flex;   
+     }
+
+     .finalvideo{
+       height: 100%;
+       width: 100%;
+       word-wrap: break-word;
+       border-radius: 10%;
+     }
+     .thumbnail{
+       /*border: 1px solid black;*/
+       width: 30%;
+       margin: 1px;
+       padding: 5%;
+     }
+     .videoinfo{
+      /*border: 1px solid black;*/
+       width: 70%;
+       padding: 
+       
+       overflow:hidden;
+     }
+
+     
+  </style>
+</head>
+
+<body>
+
+  <div class="bottom_nav">
+    <div class="logo">
+      <a href="homepage.html" target="_blank">  <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="cricinfo" style="width:200px;margin-top: 10px;"></a>
+    </div>
+    <div class="right">
+      <div class="nav-box">
+        <a target="_blank" href="#">Live Scores</a>
+      </div>
+      <div class="nav-box">
+        <a target="_blank" href="#">Series</a>
+      </div>
+      <div class="nav-box">
+        <a target="_blank" href="#">Teams</a>
+      </div>
+      <div class="nav-box">
+        <a target="_blank" href="#">News</a>
+      </div>
+      <div class="nav-box">
+        <a target="_blank" href="#">Features</a>
+      </div>
+      <div class="nav-box">
+        <a target="_blank" href="#">Videos</a>
+      </div>
+      <div class="nav-box">
+        <a target="_blank" href="#">Stats</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="video1">
+    <iframe id="vid1" src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_480_2x/esci/media/motion/cricinfo/2022/0119/cric_220119_Hindi_SAvIND_Preview_matchday_nonbranded_ODI2/cric_220119_Hindi_SAvIND_Preview_matchday_nonbranded_ODI2.jpg" title="YouTube video player" frameborder="0"
+      allow="https://www.espncricinfo.com/video/sa-v-ind-second-odi-boland-park-hindi-match-preview-with-sanjay-manjrekar-1297613"
+      allowfullscreen></iframe>
+  </div>
+  <div class="caption1">
+    <h2>Featured Videos</h2>
+  </div>
+
+
+
+
+
+
+  <div class="video2">
+    <div class="vidbox2">
+      <iframe id="vid2" src="https://img1.hscicdn.com/image/upload/f_auto,t_gn_w_352/esci/media/motion/cricinfo/2022/0119/cric_220119_Hindi_SAvIND_Spinners_nonbranded_ODI1/cric_220119_Hindi_SAvIND_Spinners_nonbranded_ODI1.jpg" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <h4 class="caption2">
+        Cummins: 'Challenge for this Australian side would be to be successful
+        overseas'
+      </h4>
+      <p>Jan16, 2022</p>
+    </div>
+    <div class="vidbox2">
+      <iframe id="vid2" src="https://www.youtube.com/embed/ezZ4OKaS0Es" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <h4 class="caption2">Root: I'm the right man to turn England around</h4>
+      <p>Jan16, 2022</p>
+    </div>
+    <div class="vidbox2">
+      <iframe id="vid2" src="https://www.youtube.com/embed/UY09td1nBSw" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <h4 class="caption2">
+        Newsroom: Is Rishabh Pant a dark horse to be India's next Test
+        captain?
+      </h4>
+      <p>Jan16, 2022</p>
+    </div>
+    <div class="vidbox2">
+      <iframe id="vid2" src="https://www.youtube.com/embed/a2ZV-7L97Hg" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <h4 class="caption2">
+        #PoliteEnquiries: Is it time up for Root as captain?
+      </h4>
+      <p>Jan16, 2022</p>
+    </div>
+  </div>
+
+
+  <div class="halfway">
+    <h2>ESPNcricinfo shows</h2>
+    <div class="showcards">
+      <div class="card"><img src="https://i.postimg.cc/rw76s2KF/card1.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/g27DPYr4/card2.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/Fzfr8g6T/card3.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/SQV1vbL1/card4.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/PJF4rh2t/card5.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/YqWgm1SN/card6.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/zDRSnmtR/card7.png" alt="" class="cardsize"></div>
+      <div class="card"><img src="https://i.postimg.cc/8PNJsxqG/card8.png" alt="" class="cardsize"></div>
+    </div>
+
+
+    <div id="finalsection">
+      <div id="finalvids">
+        <div class="finale"><img src="https://i.postimg.cc/Kz6yStLf/card10.png" alt="" class="last"></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/-k0hvqsHOss"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/pVm6jUrnca8" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen></iframe>Should Axar, Ashwin, Chahal and Harshal be in the squad for India's next series?
+          <p>Nov 21, 2021</p></div>
+        <div class="finale"><img src="https://i.postimg.cc/FFPJXRnS/card11.png" alt="" class="last"></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/DYUCefi1J_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Fantasy Pick - Back Warner and Starc to finish the tournament with a bang <p>Nov 13, 2021</p></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/pJMmhU29go4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Fantasy Pick - Bank on Babar and Warner to deliver in knockout game <p>Nov 10,2021</p></div>
+        <div class="finale"><img src="https://i.postimg.cc/rFryZw6M/card12.png" alt="" class="last"></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/tXKGLcmITK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Runorder: What's the road ahead for India? <p>Nov 13,2021</p></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/kjO0NGqqnNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Are Pakistan favourites to win the World Cup? <p>Nov 2, 2021</p></div>
+        <div class="finale"><img src="https://i.postimg.cc/KzWFQdJ1/card13.png" alt="" class="last"></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/Um13WHA5WAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Jhulan Goswami: 'If the World Cup had been postponed again, it would have been difficult for us' <p>Nov 17, 2021</p></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/2W3P13KdxE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          Lungi Ngidi: 'If we get a good start against India, we can hopefully keep that up against England and NZ next year' <p>Dec 10, 2021</p></div>
+        <div class="finale"><img src="https://i.postimg.cc/3xr88C4J/card14.png" alt="" class="last"></div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/INq9kqNRunA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="finale"><iframe class="lastvids" src="https://www.youtube.com/embed/INq9kqNRunA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    
+    
+    
+      <div id="trendingvids">
+        <div id="lastcaption"><h3>Trending Videos</h3></div>
+       
+       <div id="lastvideos">
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/4QkHIhB1hdw" title="YouTube video player" frameborder="0" allow="accelerometer; 
+          autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="videoinfo"><p>Match Day</p>
+          <h5>Sanjay Manjrekar: 'Put pressure on the opposition, open with Venkatesh Iyer'</h6>
+        </div></div>
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/50QlXwMG9Is" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="videoinfo"><p>Newsroom</p>
+            <h5>Is Rishabh Pant a dark horse to be India's next Test captain?</h5>
+          </div></div></div>
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/4Jzj6fPOEIs" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="videoinfo"><p>Match Day</p>
+            <h5>Maharaj or Shamsi? Should India trust Venkatesh Iyer?</h5>
+
+          </div></div>
+        <div class="trendingvideos"><div class="thumbnail"><iframe class="finalvideo" src="https://www.youtube.com/embed/j06dRFuuqWw" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="videoinfo">
+            <p>Press Conference</p>
+            <h5>Cummins: 'Hugely pleasing to be getting better' at balancing captaincy and bowling</h5> 
+          </div></div>
+      </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
+
+
+
